@@ -24,24 +24,25 @@
 
 // Решение
 
+System.Console.WriteLine("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+checkNumber(num);
+
+void checkNumber(int num){
+System.Console.WriteLine($"Число {num}");
+while(num > 999){
+    num /= 10;
+}
+if(num >= 100 && num < 1000){
+    int ed = num % 10;
+    System.Console.WriteLine($"Третья цифра из числа {num} -> {ed}");
+}
+else{
+    System.Console.WriteLine($"Третьей цифры из числа {num} -> нет");
+}
+}
 
 
-// void checkNumber(int num){
-// while(num > 999){
-//     num /= 10;
-// }
-// if(num >= 100 && num < 1000){
-//     int ed = num % 10;
-//     System.Console.WriteLine($"Третья цифра из числа {num} -> {ed}");
-// }
-// else{
-//     System.Console.WriteLine($"Третьей цифры из числа {num} -> нет");
-// }
-// }
-
-// System.Console.WriteLine("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// checkNumber(num);
 
 
 
